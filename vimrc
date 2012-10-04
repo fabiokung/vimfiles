@@ -289,7 +289,7 @@ call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
 let g:Powerline_symbols = 'fancy'
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
-nmap <silent> <Leader>s :TlistToggle<CR>
+nmap <silent> <Leader>t :TlistToggle<CR>
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
