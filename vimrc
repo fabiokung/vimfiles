@@ -249,27 +249,26 @@ function! s:Median(nums)
 endfunction
 
 if has("gui_running")
-    "tell the term has 256 colors
     set t_Co=256
+    set guitablabel=%M%t
+    let mapleader=","
+
+    colorscheme ir_black
+    "colorscheme railscasts
+    "colorscheme mac_classic
 
     if has("gui_gnome")
-        set term=gnome-256color
-        colorscheme ir_black
+        set guifont=Ubuntu\ Mono\ 12
     else
-        "colorscheme railscasts
-        "colorscheme mac_classic
-        colorscheme ir_black
-        set guitablabel=%M%t
-        set lines=50
-        set columns=105
     endif
     if has("gui_mac") || has("gui_macvim")
+        set lines=50
+        set columns=105
         set guifont=Monaco:h14
         "set guifont=Menlo:h14
         " make Mac's Option key behave as the Meta key
         set invmmta
         " comma as the leader key
-        let mapleader=","
         set guioptions-=r
     endif
     if has("gui_win32") || has("gui_win32s")
