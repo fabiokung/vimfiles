@@ -248,11 +248,11 @@ function! s:Median(nums)
     endif
 endfunction
 
+let mapleader=","
+
 if has("gui_running")
     set t_Co=256
     set guitablabel=%M%t
-    let mapleader=","
-
     colorscheme ir_black
     "colorscheme railscasts
     "colorscheme mac_classic
@@ -279,6 +279,8 @@ else
     "dont load csapprox if there is no gui support - silences an annoying warning
     let g:CSApprox_loaded = 1
     if has("gui")
+        set t_Co=256
+        set guitablabel=%M%t
         colorscheme ir_black
     endif
 endif
