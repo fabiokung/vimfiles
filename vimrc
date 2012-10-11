@@ -253,7 +253,7 @@ let mapleader=","
 if has("gui_running")
     set t_Co=256
     set guitablabel=%M%t
-    colorscheme ir_black
+    colorscheme xoria256
     "colorscheme railscasts
     "colorscheme mac_classic
 
@@ -281,7 +281,7 @@ else
     if has("gui")
         set t_Co=256
         set guitablabel=%M%t
-        colorscheme ir_black
+        colorscheme xoria256
     endif
 endif
 
@@ -383,10 +383,6 @@ function! s:HighlightLongLines(width)
         echomsg "Usage: HighlightLongLines [natural number]"
     endif
 endfunction
-
-" insert newline without entering insert mode
-map <M-S-Enter> O<Esc>j
-map <M-Enter> o<Esc>k
 
 "spell check when writing commit logs
 autocmd filetype svn,*commit* setlocal spell
