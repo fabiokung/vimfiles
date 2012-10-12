@@ -289,6 +289,7 @@ endif
 
 "Powerline
 call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 let g:Powerline_symbols = 'fancy'
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
