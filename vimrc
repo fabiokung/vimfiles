@@ -265,7 +265,7 @@ if has("gui_running")
     endif
     if has("gui_mac") || has("gui_macvim")
         set lines=50
-        set columns=105
+        set columns=85
         set guifont=Monaco:h14
         "set guifont=Menlo:h14
         " make Mac's Option key behave as the Meta key
