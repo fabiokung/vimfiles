@@ -151,3 +151,6 @@
 [submodule "bundle/gist"]
 	path = bundle/gist
 	url = git://github.com/mattn/gist-vim.git
+[submodule "bundle/cscope"]
+	path = bundle/cscope
+	url = git://github.com/brookhong/cscope.vim.git
