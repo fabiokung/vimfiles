@@ -288,9 +288,10 @@ else
 endif
 
 "Powerline
-call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
-let g:Powerline_symbols = 'fancy'
+set rtp+=/usr/local/lib/python3.3/site-packages/powerline/bindings/vim
+"call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+"let g:Powerline_symbols = 'fancy'
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>t :TlistToggle<CR>
