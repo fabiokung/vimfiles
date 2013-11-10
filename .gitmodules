@@ -78,14 +78,6 @@
 	path = bundle/SudoEdit
 	url = git://github.com/chrisbra/SudoEdit.vim.git
 	ignore = untracked
-[submodule "plugin/yankring"]
-	path = plugin/yankring
-	url = git://github.com/chrismetcalf/vim-yankring.git
-	ignore = untracked
-[submodule "plugin/scratch"]
-	path = plugin/scratch
-	url = git://github.com/jkramer/vim-scratch.git
-	ignore = untracked
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = git://github.com/vim-scripts/camelcasemotion.git
@@ -150,3 +142,6 @@
 [submodule "bundle/cscope"]
 	path = bundle/cscope
 	url = git://github.com/brookhong/cscope.vim.git
+[submodule "bundle/scratch"]
+	path = bundle/scratch
+	url = git@github.com:vim-scripts/scratch.vim.git
