@@ -145,3 +145,9 @@
 [submodule "bundle/scratch"]
 	path = bundle/scratch
 	url = git@github.com:vim-scripts/scratch.vim.git
+[submodule "bundle/airline"]
+	path = bundle/airline
+	url = https://github.com/bling/vim-airline
+[submodule "bundle/regionsyntax"]
+	path = bundle/regionsyntax
+	url = git@github.com:farseer90718/vim-regionsyntax.git
