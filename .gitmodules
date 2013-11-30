@@ -151,3 +151,6 @@
 [submodule "bundle/regionsyntax"]
 	path = bundle/regionsyntax
 	url = git@github.com:farseer90718/vim-regionsyntax.git
+[submodule "bundle/reveal"]
+	path = bundle/reveal
+	url = git@github.com:farseer90718/vim-reveal.git
