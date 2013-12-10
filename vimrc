@@ -98,6 +98,7 @@ set ttymouse=xterm2
 set hidden
 
 set textwidth=80
+set colorcolumn=+1
 
 let mapleader=","
 let g:airline_powerline_fonts=1
@@ -219,3 +220,4 @@ let g:gist_post_private = 1
 
 let g:reveal_root_path = '$HOME/dev/talks/reveal.js/'
 
+highlight ColorColumn ctermbg=darkcyan guibg=darkcyan
