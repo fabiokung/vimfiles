@@ -113,9 +113,6 @@ set colorcolumn=+1
 
 let mapleader=","
 let g:airline_powerline_fonts=1
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#syntastic#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 
 if has("gui")
@@ -175,9 +172,7 @@ inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
 let g:ragtag_global_maps = 1
 
-"mark syntax errors with :signs
-let g:syntastic_enable_highlighting = 0
-let g:syntastic_disabled_filetypes = ['cpp']
+"let g:syntastic_disabled_filetypes = ['cpp']
 
 "key mapping for vimgrep result navigation
 map <A-o> :copen<CR>
