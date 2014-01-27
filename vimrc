@@ -13,6 +13,11 @@ set backspace=indent,eol,start
 "store lots of :cmdline history
 set history=1000
 
+"old regexp engine (faster)
+set re=1
+
+set lazyredraw  "slow vim hack :(
+
 set showcmd     "show incomplete cmds down the bottom
 set noshowmatch
 set showmode    "show current mode down the bottom
