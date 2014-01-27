@@ -18,6 +18,7 @@ set showmode    "show current mode down the bottom
 
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
+set cursorline  "hilight current line
 
 set number      "add line numbers
 
@@ -103,40 +104,38 @@ set colorcolumn=+1
 let mapleader=","
 let g:airline_powerline_fonts=1
 
-if has("gui_running")
-    set t_Co=256
+if has("gui")
     set guitablabel=%M%t
-    colorscheme xoria256
-    "colorscheme railscasts
-    "colorscheme mac_classic
+endif
+if has("gui_running")
+    set guitablabel=%M%t
 
     if has("gui_gnome")
         set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
-    else
     endif
+
     if has("gui_mac") || has("gui_macvim")
         set lines=50
         set columns=85
         set guifont=Monaco\ for\ Powerline:h14
+
         "set guifont=Menlo:h14
         " make Mac's Option key behave as the Meta key
         set invmmta
         " comma as the leader key
         set guioptions-=r
     endif
+
     if has("gui_win32") || has("gui_win32s")
         set guifont=Consolas:h12
         set enc=utf-8
     endif
-else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
-    if has("gui")
-        set t_Co=256
-        set guitablabel=%M%t
-        colorscheme xoria256
-    endif
 endif
+"set t_Co=256
+set background=light
+colorscheme solarized
+"colorscheme wombat256mod
+"colorscheme beauty256
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>t :TlistToggle<CR>

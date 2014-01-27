@@ -143,6 +143,7 @@
 [submodule "bundle/regionsyntax"]
 	path = bundle/regionsyntax
 	url = git@github.com:farseer90718/vim-regionsyntax.git
+	ignore = untracked
 [submodule "bundle/reveal"]
 	path = bundle/reveal
 	url = git@github.com:farseer90718/vim-reveal.git
