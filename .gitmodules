@@ -154,3 +154,6 @@
 [submodule "bundle/reveal"]
 	path = bundle/reveal
 	url = git@github.com:farseer90718/vim-reveal.git
+[submodule "bundle/tmuxline"]
+	path = bundle/tmuxline
+	url = https://github.com/edkolev/tmuxline.vim.git
