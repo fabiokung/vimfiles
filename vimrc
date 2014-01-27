@@ -14,13 +14,18 @@ set backspace=indent,eol,start
 set history=1000
 
 set showcmd     "show incomplete cmds down the bottom
+set noshowmatch
 set showmode    "show current mode down the bottom
 
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
-set cursorline  "hilight current line
-
 set number      "add line numbers
+set cursorline  "hilight current line
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
 
 "display tabs and trailing spaces
 set list
@@ -103,6 +108,10 @@ set colorcolumn=+1
 
 let mapleader=","
 let g:airline_powerline_fonts=1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 if has("gui")
     set guitablabel=%M%t
@@ -162,7 +171,7 @@ inoremap <C-j>       <Down>
 let g:ragtag_global_maps = 1
 
 "mark syntax errors with :signs
-let g:syntastic_enable_signs=1
+let g:syntastic_enable_highlighting = 0
 let g:syntastic_disabled_filetypes = ['cpp']
 
 "key mapping for vimgrep result navigation
@@ -196,4 +205,3 @@ let g:gist_post_private = 1
 
 let g:reveal_root_path = '$HOME/dev/talks/reveal.js/'
 
-highlight ColorColumn ctermbg=darkcyan guibg=darkcyan
