@@ -17,7 +17,7 @@ vimfiles (Windows):
 
 bc. git clone git://github.com/fabiokung/vimfiles.git ~/.vim
 
-Then 'cd' into the repo and run this to get the snippets submodule:
+Then 'cd' into the repo and run this to get all bundles:
 
 bc. git submodule --init update
 
