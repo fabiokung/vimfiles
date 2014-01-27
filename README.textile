@@ -19,7 +19,7 @@ bc. git clone git://github.com/fabiokung/vimfiles.git ~/.vim
 
 Then 'cd' into the repo and run this to get all bundles:
 
-bc. git submodule --init update
+bc. git submodule update --init
 
 The ~/.vim/vimrc file needs to be loaded:
 
