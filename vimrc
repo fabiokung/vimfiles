@@ -95,13 +95,11 @@ set sidescroll=1
 "load pathogen managed plugins
 call pathogen#infect()
 
+"load ftplugins and indent files
+filetype plugin indent on
+
 "turn on syntax highlighting
 syntax on
-
-"load ftplugins and indent files
-filetype on
-filetype indent on
-filetype plugin on
 
 "some stuff to get the mouse going in term
 set mouse=a
