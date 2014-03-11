@@ -195,6 +195,8 @@ endfunction
 "spell check when writing commit logs
 autocmd filetype svn,*commit* setlocal spell
 
+autocmd BufRead mutt* execute 'normal gg/\n\nj'
+
 " minitest
 set completefunc=syntaxcomplete#Complete
 
