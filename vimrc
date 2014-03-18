@@ -114,6 +114,8 @@ set colorcolumn=+1
 let mapleader=","
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#mixed_indent_format = 'mix[%s]'
+let g:airline#extensions#whitespace#trailing_format = 'trl[%s]'
 
 if has("gui")
     set guitablabel=%M%t
