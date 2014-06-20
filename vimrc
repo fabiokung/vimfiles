@@ -194,6 +194,10 @@ function! SetCursorPosition()
     end
 endfunction
 
+function! SoftLineWrap()
+    setlocal wrap linebreak nolist wrapmargin=0 formatoptions-=tc
+endfunction
+
 "spell check when writing commit logs
 autocmd filetype svn,*commit* setlocal spell
 
@@ -207,5 +211,5 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
-let g:reveal_root_path = '$HOME/dev/talks/reveal.js/'
+let g:reveal_root_path = '$HOME/Documents/Talks/QConSP/escalabilidade-heroku/'
 
