@@ -152,6 +152,16 @@ colorscheme solarized
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>t :TagbarToggle<CR>
+let g:tagbar_type_go = {
+            \ 'ctagstype': 'go',
+            \ 'kinds' : [
+            \'p:package',
+            \'f:function',
+            \'v:variables',
+            \'t:type',
+            \'c:const'
+            \]
+        \}
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
