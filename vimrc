@@ -170,6 +170,9 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>f :BufExplorer<CR>
 
+"map for Gundo
+nnoremap <leader>u :GundoToggle<CR>
+
 "map Q to something useful
 noremap Q gq
 
