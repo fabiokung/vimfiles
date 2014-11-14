@@ -216,9 +216,15 @@ autocmd filetype svn,*commit* setlocal spell
 
 autocmd BufRead mutt* execute 'normal gg/\n\nj'
 
-" minitest
+"minitest
 set completefunc=syntaxcomplete#Complete
 
+"snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"Gists
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
