@@ -68,9 +68,9 @@ set encoding=utf-8
 set guioptions-=T
 
 "indent settings
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+"set shiftwidth=4
+"set softtabstop=4
+"set expandtab
 set autoindent
 
 set smartcase
@@ -152,16 +152,16 @@ colorscheme solarized
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>t :TagbarToggle<CR>
-let g:tagbar_type_go = {
-            \ 'ctagstype': 'go',
-            \ 'kinds' : [
-            \'p:package',
-            \'f:function',
-            \'v:variables',
-            \'t:type',
-            \'c:const'
-            \]
-        \}
+"let g:tagbar_type_go = {
+"            \ 'ctagstype': 'go',
+"            \ 'kinds' : [
+"            \'p:package',
+"            \'f:function',
+"            \'v:variables',
+"            \'t:type',
+"            \'c:const'
+"            \]
+"        \}
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
@@ -230,5 +230,9 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
+"Golang
+let g:go_fmt_command = "goimports"
+
+"Reveal.js
 let g:reveal_root_path = '$HOME/Documents/Talks/QConSP/escalabilidade-heroku/'
 
