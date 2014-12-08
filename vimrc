@@ -124,7 +124,7 @@ if has("gui_running")
     set guitablabel=%M%t
 
     if has("gui_gnome")
-        set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+        set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
     endif
 
     if has("gui_mac") || has("gui_macvim")

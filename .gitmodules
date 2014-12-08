@@ -177,3 +177,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "bundle/github-colorscheme"]
+	path = bundle/github-colorscheme
+	url = https://github.com/endel/vim-github-colorscheme.git
