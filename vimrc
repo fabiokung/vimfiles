@@ -64,8 +64,11 @@ set fo=l
 
 set encoding=utf-8
 
-"turn off needless toolbar on gvim/mvim
+"turn off needless toolbar/menubar/scrollbars on gvim/mvim
 set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+set guioptions-=m
 
 "indent settings
 "set shiftwidth=4
@@ -117,6 +120,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#mixed_indent_format = 'mix[%s]'
 let g:airline#extensions#whitespace#trailing_format = 'trl[%s]'
 
+let base16colorspace=256
+set background=light
+colorscheme base16-tomorrow
+"colorscheme solarized
+"colorscheme wombat256mod
+"colorscheme beauty256
 if has("gui")
     set guitablabel=%M%t
 endif
@@ -125,6 +134,7 @@ if has("gui_running")
 
     if has("gui_gnome")
         set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
+        colorscheme github
     endif
 
     if has("gui_mac") || has("gui_macvim")
@@ -136,7 +146,6 @@ if has("gui_running")
         " make Mac's Option key behave as the Meta key
         set invmmta
         " comma as the leader key
-        set guioptions-=r
     endif
 
     if has("gui_win32") || has("gui_win32s")
@@ -145,10 +154,6 @@ if has("gui_running")
     endif
 endif
 "set t_Co=256
-set background=light
-colorscheme solarized
-"colorscheme wombat256mod
-"colorscheme beauty256
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>t :TagbarToggle<CR>
