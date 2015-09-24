@@ -34,7 +34,7 @@ augroup END
 
 "display tabs and trailing spaces
 set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
 
 set showbreak=...
 set nowrap linebreak
@@ -115,17 +115,24 @@ set textwidth=80
 set colorcolumn=+1
 
 let mapleader=","
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#mixed_indent_format = 'mix[%s]'
-let g:airline#extensions#whitespace#trailing_format = 'trl[%s]'
 
 let base16colorspace=256
 set background=light
 colorscheme base16-tomorrow
-"colorscheme solarized
-"colorscheme wombat256mod
-"colorscheme beauty256
+
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#mixed_indent_format = 'mix[%s]'
+let g:airline#extensions#whitespace#trailing_format = 'trl[%s]'
+let g:airline#extensions#tmuxline#enabled = 0
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 3
+let g:indent_guides_guide_size = 1
+
+"syntastic is slow for Golang
+let g:syntastic_mode_map = { 'passive_filetypes': ['go'] }
+
 if has("gui")
     set guitablabel=%M%t
 endif
@@ -134,18 +141,14 @@ if has("gui_running")
 
     if has("gui_gnome")
         set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
-        colorscheme github
     endif
 
     if has("gui_mac") || has("gui_macvim")
         set lines=50
         set columns=85
         set guifont=Monaco\ for\ Powerline:h14
-
-        "set guifont=Menlo:h14
         " make Mac's Option key behave as the Meta key
         set invmmta
-        " comma as the leader key
     endif
 
     if has("gui_win32") || has("gui_win32s")
@@ -153,52 +156,23 @@ if has("gui_running")
         set enc=utf-8
     endif
 endif
-"set t_Co=256
+
+"make Y consistent with C and D
+nnoremap Y y$
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nmap <silent> <Leader>t :TagbarToggle<CR>
-"let g:tagbar_type_go = {
-"            \ 'ctagstype': 'go',
-"            \ 'kinds' : [
-"            \'p:package',
-"            \'f:function',
-"            \'v:variables',
-"            \'t:type',
-"            \'c:const'
-"            \]
-"        \}
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
-"map to bufexplorer
 nnoremap <leader>f :BufExplorer<CR>
-
-"map for Gundo
 nnoremap <leader>u :GundoToggle<CR>
 
-"map Q to something useful
-noremap Q gq
-
-"make Y consistent with C and D
-nnoremap Y y$
-
-"quicksilver in fuzzy mode by default
-let g:QSMatchFn = "fuzzy"
-
-"bindings for ragtag
-inoremap <M-o>       <Esc>o
-inoremap <C-j>       <Down>
-let g:ragtag_global_maps = 1
-
-"let g:syntastic_disabled_filetypes = ['cpp']
-
-"key mapping for vimgrep result navigation
-map <A-o> :copen<CR>
-map <A-q> :cclose<CR>
-map <A-j> :cnext<CR>
-map <A-k> :cprevious<CR>
+"Error list nav
+map <C-j> :lnext<CR>
+map <C-k> :lprevious<CR>
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
@@ -220,14 +194,6 @@ endfunction
 autocmd filetype svn,*commit* setlocal spell
 
 autocmd BufRead mutt* execute 'normal gg/\n\nj'
-
-"minitest
-set completefunc=syntaxcomplete#Complete
-
-"snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Gists
 let g:gist_clip_command = 'xclip -selection clipboard'
