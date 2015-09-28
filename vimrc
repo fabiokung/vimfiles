@@ -131,7 +131,8 @@ let g:indent_guides_color_change_percent = 3
 let g:indent_guides_guide_size = 1
 
 "syntastic is slow for Golang
-let g:syntastic_mode_map = { 'passive_filetypes': ['go'] }
+"let g:syntastic_mode_map = { 'passive_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['govet', 'errcheck']
 
 if has("gui")
     set guitablabel=%M%t
